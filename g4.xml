@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="github"
+           fetch="git://github.com" />
+  <remote  name="android"
+           fetch="https://android.googlesource.com" />
+  <remote  name="sfX"
+           fetch="git://github.com/steadfasterX" />
+  <default revision="refs/heads/master"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <remove-project path="bootloader/lk/common/shared" name="efidroid/bootloader_lk" revision="common/shared" />
+  <project path="bootloader/lk/common/shared" name="efidroid_bootloader_lk" revision="common/shared" remote="sfX" />
+
+  <remove-project path="uefi/edk2" name="efidroid/edk2" revision="refs/heads/master-lk" />
+  <project path="uefi/edk2" name="efidroid_edk2" revision="refs/heads/master-lk" remote="sfX"/>
+
+  <remove-project path="modules/dtbtools" name="efidroid/modules_dtbtools" />
+  <project path="modules/dtbtools" name="efidroid_modules_dtbtools" remote="sfX" />
+ 
+  <project path="device/lge/g4" name="efidroid_device_lge_g4" revision="master" remote="sfX"/>
+</manifest>
