@@ -1,9 +1,9 @@
 # efidroid_manifests
 
-## .repo/manifests/default.xml
+## .repo/manifests/
 
---> manifest.xml
+copy there --> default.xml
 
 ## .repo/local_manifests
 
---> g4.xml
+copy there --> g4.xml
